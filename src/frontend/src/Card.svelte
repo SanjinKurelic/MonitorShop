@@ -38,7 +38,7 @@
 
 <div class="card product">
   <img class="product-image" src={productImage} alt="Product" />
-  <h1>{productTitle}</h1>
+  <h1>{@html productTitle}</h1>
   <slot name="description">
     <p>No description</p>
   </slot>

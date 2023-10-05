@@ -10,7 +10,7 @@
   let products = [
     {
       id: uuidv4(),
-      title: "Monitor",
+      title: 'Monitor',// <div style="color:red">NOVO</div>',
       description: "Black monitor with good contrast.",
       price: 250.0,
       image: "./images/wide.png",
