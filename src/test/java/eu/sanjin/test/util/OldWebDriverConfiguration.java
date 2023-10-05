@@ -22,6 +22,10 @@ public class OldWebDriverConfiguration {
                 driverPathChrome = "driver/chromedriver.exe";
                 chromeAppPath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
             }
+            case "Mac OS X" -> {
+                driverPathChrome = "/opt/homebrew/bin/chromedriver";
+                chromeAppPath = "/Applications/Google\\ Chrome.app";
+            }
             default -> log.error(System.getProperty("os.name") + " is not supported");
         }
 
