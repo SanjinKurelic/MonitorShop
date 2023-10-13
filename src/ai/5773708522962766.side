@@ -1,0 +1,43 @@
+{
+  "id": "test_case_login",
+  "name": "Login Test Case",
+  "url": "http://localhost:8080",
+  "tests": [
+    {
+      "id": "test_validate_login",
+      "name": "Validate Login",
+      "commands": [
+        {
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "name=name",
+          "value": "testuser"
+        },
+        {
+          "command": "type",
+          "target": "name=email",
+          "value": "testuser@example.com"
+        },
+        {
+          "command": "type",
+          "target": "name=password",
+          "value": "testpassword123"
+        },
+        {
+          "command": "click",
+          "target": "css=input[type=submit]",
+          "value": ""
+        },
+        {
+          "command": "assertText",
+          "target": "id=error",
+          "value": "Successfully logged in"
+        }
+      ]
+    }
+  ]
+}

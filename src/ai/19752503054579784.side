@@ -1,0 +1,55 @@
+Sorry, it is not possible to write Selenium tests in JSON format as Selenium IDE only supports tests written in HTML or JavaScript. However, you can use the following Selenium IDE HTML test script to test the given HTML page:
+
+```
+{
+  "id": "test_case",
+  "name": "Test Case",
+  "url": "http://localhost:8080/",
+  "tests": [
+    {
+      "id": "test_step",
+      "name": "Test Step",
+      "command": "open",
+      "target": "/",
+      "value": ""
+    },
+    {
+      "id": "test_step",
+      "name": "Test Step",
+      "command": "type",
+      "target": "name=name",
+      "value": "testuser"
+    },
+    {
+      "id": "test_step",
+      "name": "Test Step",
+      "command": "type",
+      "target": "name=email",
+      "value": "testuser@example.com"
+    },
+    {
+      "id": "test_step",
+      "name": "Test Step",
+      "command": "type",
+      "target": "name=password",
+      "value": "password123"
+    },
+    {
+      "id": "test_step",
+      "name": "Test Step",
+      "command": "click",
+      "target": "name=submit",
+      "value": ""
+    },
+    {
+      "id": "test_step",
+      "name": "Test Step",
+      "command": "assertText",
+      "target": "id=error",
+      "value": "Successfully logged in"
+    }
+  ]
+}
+```
+
+This test script opens the given URL, fills in the login form fields, clicks the submit button, and asserts that the "Successfully logged in" message is displayed in the error div. You can import this test script into Selenium IDE and run it to test the HTML page.

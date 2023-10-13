@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+          integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+  <style>
+    table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input[type="button"] {
+      width: 100%;
+      padding: 20px 40px;
+      background-color: #bebebe;
+      font-size: 24px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="text"] {
+      padding: 20px 30px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 5px;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<!-- create table -->
+
+<body>
+<table id="calculator">
+  <tr>
+    <td colspan="3"><input type="text" id="result"></td>
+    <td><input type="button" value="c" onclick="clr()"/></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="1" onclick="dis('1')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="2" onclick="dis('2')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="3" onclick="dis('3')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="/" onclick="dis('/')" onkeydown="myFunction()"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="4" onclick="dis('4')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="5" onclick="dis('5')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="6" onclick="dis('6')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="*" onclick="dis('*')" onkeydown="myFunction()"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="7" onclick="dis('7')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="8" onclick="dis('8')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="9" onclick="dis('9')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="-" onclick="dis('-')" onkeydown="myFunction()"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="0" onclick="dis('0')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="." onclick="dis('.')" onkeydown="myFunction()"></td>
+    <td><input type="button" value="=" onclick="solve()"></td>
+
+    <td><input type="button" value="+" onclick="dis('+')" onkeydown="myFunction()"></td>
+  </tr>
+</table>
+
+<script>
+  // Function that display value
+  function dis(val) {
+    document.getElementById("result").value += val
+  }
+
+  function myFunction(event) {
+    if (['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/'].includes(event.key))
+      document.getElementById("result").value += event.key;
+  }
+
+  document.getElementById("calculator").onkeyup = function (event) {
+    if (event.keyCode === 13) {
+      solve();
+    }
+  }
+
+  function solve() {
+    let x = document.getElementById("result").value
+    document.getElementById("result").value = math.evaluate(x)
+  }
+
+  function clr() {
+    document.getElementById("result").value = ""
+  }
+</script>
+</body>
+
+</html>
