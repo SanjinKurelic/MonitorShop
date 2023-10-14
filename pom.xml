@@ -17,13 +17,13 @@
     <http-client.version>5.2.1</http-client.version>
     <constretto.version>3.0.0-BETA4</constretto.version>
     <ini4j.version>0.5.4</ini4j.version>
-    <lombok.version>1.18.24</lombok.version>
-    <mapstruct.version>1.5.3.Final</mapstruct.version>
-    <slf4j.version>2.0.5</slf4j.version>
-    <jackson.version>2.14.1</jackson.version>
+    <lombok.version>1.18.30</lombok.version>
+    <mapstruct.version>1.5.5.Final</mapstruct.version>
+    <slf4j.version>2.0.9</slf4j.version>
+    <jackson.version>2.15.2</jackson.version>
     <testcontainers.version>1.19.1</testcontainers.version>
     <selenium.version>4.13.0</selenium.version>
-    <testng.version>7.7.0</testng.version>
+    <testng.version>7.8.0</testng.version>
     <tcp.version>1.6</tcp.version>
   </properties>
 
