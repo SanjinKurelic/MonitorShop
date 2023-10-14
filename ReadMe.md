@@ -1,6 +1,7 @@
 # Monitor Shop
 
-Monitor Shop is a web shop for buying monitors. This is a demo application for Selenium automated test presentation.
+Monitor Shop is a web shop for buying monitors. This is a demo application for Selenium automated test presentation 
+(ex. [JavaCro 23](https://2023.javacro.hr/eng/Program/Selenium-AI-Selenium-WireMock-and-ChatGPT)).
 
 Implemented features are:
 
@@ -33,9 +34,7 @@ There are two test cases:
 - Selenium with TestContainers (require Docker on host system)
 - Selenium with local driver (require Chrome version 110 on host system)
 
-To run AI which will generate automatic test cases, you need to run following commands:
-
-Run this project with:
+To run AI which will generate automatic test cases, open the terminal inside `src/ai/` directory and run this command:
 
 `node .\generate-selenium-test.js <page_url>`
 
